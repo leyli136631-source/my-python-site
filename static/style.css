@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);  /* Purple to Blue gradient */
+    color: #fff;  /* White text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.4);  /* Inner shadow for depth */
+}
+
+.container {
+    text-align: center;
+    animation: slideIn 1.5s ease-out;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #000000;  /* Black text for headings */
+    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.8);  /* White glow shadow for contrast */
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #000000;  /* Black text for paragraphs */
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.7);  /* White shadow for visibility */
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.25);  /* Light semi-transparent card background */
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 15px;
+    width: 300px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);  /* Stronger shadow */
+}
+
+.card:hover {
+    background: rgba(255, 255, 255, 0.35);  /* Darker card on hover */
+    transform: rotate(5deg);  /* Rotate effect on hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);  /* More prominent shadow */
+}
+
+a {
+    color: #000000;  /* Black links */
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.7);  /* White shadow on links */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffffff;  /* Links turn white on hover */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);  /* Darker shadow when hovered */
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.delay-1 { animation-delay: 0.5s; }
+.delay-2 { animation-delay: 1s; }
+.delay-3 { animation-delay: 1.5s; }
+.delay-4 { animation-delay: 2s; }
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
